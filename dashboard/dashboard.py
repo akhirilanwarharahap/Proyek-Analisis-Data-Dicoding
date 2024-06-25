@@ -2,35 +2,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-import os
 
 sns.set(style="dark")
 
 
 # Helper function untuk menyiapkan dataframe dari file CSV
-def load_data(filepath):
-    # Menggunakan os.path.join untuk membangun path secara platform-independent
-    filepath = os.path.join(os.getcwd(), filepath)
+# Load data from CSV
+all_df = pd.read_csv("./data/all_data.csv")
 
-    if not os.path.exists(filepath):
-        st.error(f"File '{filepath}' not found.")
-        return None
+# Konversi kolom 'dteday' menjadi datetime jika diperlukan
+all_df["dteday"] = pd.to_datetime(all_df["dteday"])
 
-    try:
-        df = pd.read_csv(filepath)
-        if "dteday" in df.columns:
-            df["dteday"] = pd.to_datetime(df["dteday"])
-        else:
-            st.error("Column 'dteday' not found in the dataset.")
-            return None
-        return df
-    except Exception as e:
-        st.error(f"Error loading data: {e}")
-        return None
-
-
-# Load cleaned data
-all_df = load_data("all_data.csv")
 
 if all_df is not None:
     min_date = all_df["dteday"].min()
