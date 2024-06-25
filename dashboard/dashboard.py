@@ -7,32 +7,22 @@ sns.set(style="dark")
 
 
 # Helper function untuk menyiapkan dataframe dari file CSV
-# def load_data(filepath):
-#     try:
-#         df = pd.read_csv(filepath)
-#         if "dteday" in df.columns:
-#             df["dteday"] = pd.to_datetime(df["dteday"])
-#         else:
-#             st.error("Column 'dteday' not found in the dataset.")
-#             return None
-#         return df
-#     except Exception as e:
-#         st.error(f"Error loading data: {e}")
-#         return None
-
-
-all_df = pd.read_csv("all_data.csv")
-
-datetime_columns = ["dteday"]
-all_df.sort_values(by="dteday", inplace=True)
-all_df.reset_index(inplace=True)
-
-for column in datetime_columns:
-    all_df[column] = pd.to_datetime(all_df[column])
+def load_data(filepath):
+    try:
+        df = pd.read_csv(filepath)
+        if "dteday" in df.columns:
+            df["dteday"] = pd.to_datetime(df["dteday"])
+        else:
+            st.error("Column 'dteday' not found in the dataset.")
+            return None
+        return df
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return None
 
 
 # Load cleaned data
-# all_df = load_data("all_data.csv")
+all_df = load_data("all_data.csv")
 
 if all_df is not None:
     min_date = all_df["dteday"].min()
