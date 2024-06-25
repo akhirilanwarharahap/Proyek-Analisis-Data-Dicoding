@@ -6,9 +6,8 @@ import streamlit as st
 sns.set(style="dark")
 
 
-# Helper function untuk menyiapkan dataframe dari file CSV
 # Load data from CSV
-all_df = pd.read_csv("./data/all_data.csv")
+all_df = pd.read_csv("all_data.csv")
 
 # Konversi kolom 'dteday' menjadi datetime jika diperlukan
 all_df["dteday"] = pd.to_datetime(all_df["dteday"])
