@@ -2,12 +2,20 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
 
 sns.set(style="dark")
 
 
 # Helper function untuk menyiapkan dataframe dari file CSV
 def load_data(filepath):
+    # Menggunakan os.path.join untuk membangun path secara platform-independent
+    filepath = os.path.join(os.getcwd(), filepath)
+
+    if not os.path.exists(filepath):
+        st.error(f"File '{filepath}' not found.")
+        return None
+
     try:
         df = pd.read_csv(filepath)
         if "dteday" in df.columns:
