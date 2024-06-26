@@ -6,7 +6,7 @@ import streamlit as st
 sns.set(style="dark")
 
 # Load data from CSV
-all_df = pd.read_csv("/Proyek-Analisis-Data-Dicoding/dashboard/all_data.csv")
+all_df = pd.read_csv("dashboard/all_data.csv")
 
 # Konversi kolom 'dteday' menjadi datetime jika diperlukan
 all_df["dteday"] = pd.to_datetime(all_df["dteday"])
