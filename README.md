@@ -21,8 +21,7 @@ Proyek ini bertujuan untuk menganalisis data pada Bike Sharing Dataset. Tujuan a
 2. Pastikan Anda memiliki environment Python yang sesuai dan pustaka-pustaka yang diperlukan. Anda dapat menginstal pustaka-pustaka tersebut dengan menjalankan perintah berikut:
 
    ```shell
-   pip install streamlit
-   pip install -r dashboard/requirements.txt
+   pip install -r requirements.txt
    ```
 
 ## Penggunaan
