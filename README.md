@@ -1,14 +1,41 @@
-# Dicoding Collection Dashboard ✨
+# Belajar Analisis Data dengan Python
 
-## Setup environment
-```
-conda create --name main-ds python=3.9
-conda activate main-ds
-pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
-```
+## Deskripsi
 
-## Run steamlit app
-```
-streamlit run dashboard.py
-```
+Proyek ini bertujuan untuk menganalisis data pada Bike Sharing Dataset. Tujuan akhirnya adalah untuk menghasilkan wawasan dan informasi yang berguna dari data yang dianalisis.
+
+## Struktur Direktori
+
+- **/dashboard**: Direktori ini berisi dashboard.py yang digunakan untuk membuat dashboard hasil analisis data.
+- **/data**: Direktori ini berisi data yang digunakan dalam proyek, dalam format .csv .
+- **Proyek_Analisis_Data_E_Commerce.ipynb**: File ini yang digunakan untuk melakukan analisis data.
+
+## Instalasi
+
+1. Clone repository ini ke komputer lokal Anda menggunakan perintah berikut:
+
+   ```shell
+   git clone https://github.com/akhirilanwarharahap/Proyek-Analisis-Data-Dicoding
+   ```
+
+2. Pastikan Anda memiliki environment Python yang sesuai dan pustaka-pustaka yang diperlukan. Anda dapat menginstal pustaka-pustaka tersebut dengan menjalankan perintah berikut:
+
+   ```shell
+   pip install streamlit
+   pip install -r dashboard/requirements.txt
+   ```
+
+## Penggunaan
+
+1. Masuk ke direktori proyek (Local):
+
+   ```shell
+   cd dashboard
+   streamlit run main.py
+   ```
+
+   Atau bisa dengan kunjungi website ini [Project Data Analytics](https://dicoding-tjan2lwsgz3l97a447szqk.streamlit.app/)
+
+   <img src="./dashboard/ss.png" alt="Streamlit logo"></img>
+
 
