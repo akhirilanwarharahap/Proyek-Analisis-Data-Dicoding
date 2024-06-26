@@ -34,8 +34,7 @@ Proyek ini bertujuan untuk menganalisis data pada Bike Sharing Dataset. Tujuan a
    streamlit run main.py
    ```
 
-   Atau bisa dengan kunjungi website ini [Project Data Analytics](https://dicoding-tjan2lwsgz3l97a447szqk.streamlit.app/)
+   Atau bisa dengan kunjungi website ini [Project Data Analytics]([https://dicoding-tjan2lwsgz3l97a447szqk.streamlit.app/](https://datavisualisasiku.streamlit.app/))
 
-   <img src="./dashboard/ss.png" alt="Streamlit logo"></img>
 
 
