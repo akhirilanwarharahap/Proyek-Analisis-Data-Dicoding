@@ -8,7 +8,7 @@ Proyek ini bertujuan untuk menganalisis data pada Bike Sharing Dataset. Tujuan a
 
 - **/dashboard**: Direktori ini berisi dashboard.py yang digunakan untuk membuat dashboard hasil analisis data.
 - **/data**: Direktori ini berisi data yang digunakan dalam proyek, dalam format .csv .
-- **Proyek_Analisis_Data_E_Commerce.ipynb**: File ini yang digunakan untuk melakukan analisis data.
+- **notebook.ipynb**: File ini yang digunakan untuk melakukan analisis data.
 
 ## Instalasi
 
